@@ -1,156 +1,205 @@
-![Mercur Main Cover](https://cdn.prod.website-files.com/6790aeffc4b432ccaf1b56e5/67a225dc6fa298afc1cc4ae6_Mercur%20Cover.png)
+# 🧢 Hat Marketplace
 
-<div align="center">
-  <h1>Mercur <br> Open Source Marketplace Platform</h1> 
-  <!-- Shields.io Badges -->
-  <a href="https://github.com/mercurjs/mercur/tree/main?tab=MIT-1-ov-file">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" />
-  </a>
-  <a href="#">
-    <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
-  </a>
-  <a href="https://rigbyjs.com/#contact">
-    <img alt="Support" src="https://img.shields.io/badge/support-contact%20author-blueviolet.svg" />
-  </a>
-  <!-- Website Links -->
-  <p>
-    <a href="https://mercurjs.com/">Mercur</a> |   <a href="https://docs.mercurjs.com/">Docs</a>  |   <a href="https://discord.gg/NTWNa49S">Discord Community</a> 
-  </p> 
-</div>
+Open source marketplace for buying and selling hats, built on Mercur.
 
-# What is Mercur?
+## 🏗 Architecture
 
-<a href="https://www.mercurjs.com/">Mercur</a> is the first
-truly limitless open source marketplace platform that
-combines the simplicity of SaaS with the freedom of open
-source. Built on
-[MedusaJS](https://github.com/medusajs/medusa), it empowers
-businesses to create custom marketplaces without choosing
-between ownership and ease of use.
-
-Mercur is a platform to start, customize, manage, and scale
-your marketplace for every business model with a modern
-technology stack.
-
-## Announcing Mercur 1.0
-
-After months of development, testing, and close
-collaboration with early adopters, we’re excited to announce
-the official release of **Mercur 1.0** - the first truly
-limitless marketplace platform. Version 1.0 is fully open
-source and ready to be self-hosted, giving you **full
-control over infrastructure, customizations, and data**.
-
-With this version, **Mercur is production-ready for B2C
-marketplaces**. The first complete version includes a vendor
-system, admin panel, and a fully built B2C Storefront. Read
-more in
-**[official release announcement](https://www.mercurjs.com/updates/mercur-1-0-release)**
-
-## Why Choose Mercur?
-
-- Full Ownership: Unlike SaaS platforms, you own your
-  marketplace with no transaction fees or vendor lock-in
-- Modern Foundation: Built on MedusaJS, offering a modern
-  tech stack that developers love
-- Beautiful by Default: Create stunning storefronts without
-  sacrificing customization
-
-## Power Any Marketplace Model
-
-- Custom B2B Marketplace: Build enterprise-grade platforms
-  with specialized workflows
-- Custom B2C Marketplace: Create engaging consumer
-  marketplaces with modern UX
-- eCommerce Extension: Transform your store into a
-  marketplace (coming soon)
-
-![Mercur Use Cases](https://cdn.prod.website-files.com/6790aeffc4b432ccaf1b56e5/67b46aa08180d5b8499c6a15_Use-cases.jpg)
-&nbsp;
-
-# Ready-to-go marketplace features
-
-<b>Storefronts for Marketplace </b> <br> Customizable
-storefronts designed for B2B and B2C with all elements
-including browsing and buying products across multiple
-vendors at once.
-
-Discover
-<a href="https://github.com/mercurjs/b2c-marketplace-storefront">B2C
-Storefront Repository</a> -
-<a href="https://b2c.mercurjs.com/">🛍️ Check demo </a>
-
-<b>Admin Panel</b> <br> Control over whole marketplace:
-setting product categories, vendors, commissions and rules
-
-<b>Vendor Panel</b> <br> A powerful dashboard giving sellers
-complete control over their products, orders, and store
-management in one intuitive interface.
-
-Discover
-<a href="https://github.com/mercurjs/vendor-panel">Vendor
-Panel</a> - <a href="https://www.mercurjs.com/contact">
-Contact us to get demo </a>
-
-<b>Integrations</b> <br> Built-in integration with Stripe
-for payments and Resend for communication needs. More
-integrations coming soon.
-
-![Mercur](https://cdn.prod.website-files.com/6790aeffc4b432ccaf1b56e5/67a1020f202572832c954ead_6b96703adfe74613f85133f83a19b1f0_Fleek%20Tilt%20-%20Readme.png)
-
-&nbsp;
-
-## Quickstart
-
-**Step 1**: Install `mercur-cli` using NPM:
-
-```bash
-npm i -g mercur-cli
+```
+┌─────────────────────────────────────┐
+│  Hat Buyers (B2C Storefront)       │
+│  - Browse hats from vendors           │
+│  - 5-star verified reviews             │
+│  - Multi-vendor comparison             │
+│  - Secure Stripe checkout            │
+└─────────────────────────────────────┘
+              ↕
+┌─────────────────────────────────────┐
+│  Hat Sellers (Vendor Panel)        │
+│  - Manage hat listings             │
+│  - Track orders & analytics          │
+│  - Request payouts                 │
+│  - Commission-based selling          │
+└─────────────────────────────────────┘
+              ↕
+┌─────────────────────────────────────┐
+│  Platform Admin                  │
+│  - Approve vendors                  │
+│  - Manage categories & commissions  │
+│  - Resolve disputes                 │
+└─────────────────────────────────────┘
+              ↕
+         REST API (MedusaJS)
+         ↓
+┌─────────────────────────────────────┐
+│     PostgreSQL Database            │
+│  - Products, vendors, orders       │
+│  - Users, reviews, ratings         │
+│  - Commissions, payouts             │
+└─────────────────────────────────────┘
 ```
 
-**Step 2**: Run CLI installation:
+## 🛠 Tech Stack
+
+| Component | Technology |
+|-----------|-------------|
+| Backend | MedusaJS (Node.js) |
+| Database | PostgreSQL |
+| Payments | Stripe (built-in) |
+| Email | Resend |
+| Search | Algolia (optional) |
+| Frontend | React/Next.js |
+
+## 🎨 Hat Categories
+
+- Baseball Caps
+- Beanies
+- Bucket Hats
+- Cowboy Hats
+- Fedora Hats
+- Flat Caps
+- Sun Hats
+- Trucker Hats
+- Winter Hats
+- Vintage Hats
+
+## ⭐ Rating System
+
+- **Verified purchase reviews only** - No fake reviews!
+- **5-star rating system**
+- **Detailed review categories**:
+  - Quality of materials
+  - Sizing accuracy
+  - Value for money
+  - Shipping speed
+  - Seller communication
+
+## 💰 Commission Tiers
+
+| Tier | Rate | Requirements |
+|-------|-------|-------------|
+| Standard | 15% | None |
+| Premium | 12% | 100+ sales/month |
+| Enterprise | 10% | 500+ sales/month |
+
+## 🚀 Quick Start
+
+### 1. Clone Repository
 
 ```bash
-mercur-cli install
+git clone https://github.com/mercurjs/mercur.git hat-marketplace
+cd hat-marketplace
 ```
 
-or
+### 2. Set Up Database
+
+**Option A: PostgreSQL (Local)**
+```bash
+sudo service postgresql start
+sudo -u postgres createdb hat_marketplace
+```
+
+**Option B: Neon (Managed - Easiest)**
+```bash
+# Sign up at https://neon.tech/ (free tier)
+# Get connection string from dashboard
+# Add to apps/backend/.env
+DATABASE_URL=postgres://user:password@ep-cool-neon-host.aws.neon.tech:5432/hat_marketplace
+```
+
+### 3. Configure Environment
 
 ```bash
-npx mercur-cli install
+cd apps/backend
+cp .env.example .env
+nano .env
 ```
 
-The script will guide you through the installation process.
-You will have to enter project name and database connection
-parameters. Also, you'll be asked if you want to install
-Mercur Storefront and Vendor panel.
-
-**Step 3**: After installation is done, move to the project
-catalog and start the servers:
+### 4. Install Dependencies & Start
 
 ```bash
-cd <yourProjectName>
+# Install all dependencies
+yarn install
 
-mercur-cli dev
+# Run migrations
+yarn db:migrate
+
+# Seed database (creates admin user)
+yarn seed
+
+# Start development
+yarn dev
 ```
 
-&nbsp;
+### 5. Clone & Start Frontends
 
-## Prerequisites
+```bash
+# B2C Storefront (Hat Shop)
+git clone https://github.com/mercurjs/b2c-marketplace-storefront.git apps/b2c-storefront
+cd apps/b2c-storefront
+yarn install
+yarn dev
 
-- [Node.js v20+](https://nodejs.org/en/download)
-- [Yarn](https://yarnpkg.com/getting-started/install)
-- [PostgreSQL](https://git-scm.com/downloads)
-- [Git CLI](https://www.postgresql.org/download/)
+# Vendor Panel
+git clone https://github.com/mercurjs/vendor-panel.git apps/vendor-panel
+cd apps/vendor-panel
+yarn install
+yarn dev
+```
 
-# Resources
+## 📋 Services
 
-#### Learn more about Mercur
+| Service | Local URL | Description |
+|---------|-----------|-------------|
+| **Backend API** | http://localhost:9000 | MedusaJS backend |
+| **B2C Storefront** | http://localhost:3001 | Hat shop |
+| **Vendor Panel** | http://localhost:3003 | Seller dashboard |
+| **Admin Panel** | http://localhost:3002 | Platform admin |
 
-- [Mercur Website](https://www.mercurjs.com/)
-- [Mercur Docs](https://docs.mercurjs.com/introduction)
+## 📚 Documentation
 
-#### Learn more about Medusa
+- [SETUP.md](./SETUP.md) - Complete setup guide with troubleshooting
+- [REFERENCE.md](./REFERENCE.md) - Quick reference (URLs, commands, API)
+- [BUILD-COMPLETE.md](./BUILD-COMPLETE.md) - Setup options checklist
 
-- [Medusa Website](https://www.medusajs.com/)
-- [Medusa Docs](https://docs.medusajs.com/v2)
+## 🔑 Environment Variables
+
+Required in `apps/backend/.env`:
+
+```bash
+# Database
+DATABASE_URL=postgres://user:password@host:port/hat_marketplace
+
+# CORS
+STORE_CORS=http://localhost:3001
+ADMIN_CORS=http://localhost:3002
+VENDOR_CORS=http://localhost:3003
+AUTH_CORS=http://localhost:3001
+
+# Secrets
+JWT_SECRET=your-super-secret-jwt-key
+COOKIE_SECRET=your-super-secret-cookie-key
+
+# Stripe
+STRIPE_SECRET_API_KEY=sk_live_xxxx
+STRIPE_PUBLISHABLE_KEY=pk_live_xxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxx
+
+# Email
+RESEND_API_KEY=re_xxxx
+RESEND_FROM_EMAIL=noreply@hatmarketplace.com
+
+# Optional
+ALGOLIA_API_KEY=xxxx
+ALGOLIA_APP_ID=xxxx
+```
+
+## 📊 Status
+
+- ✅ **Cloned** from Mercur repository
+- ✅ **Documentation added** - README, setup guide, reference
+- ✅ **Environment template** - `.env.example`
+- 📝 **Next** - Set up database and install dependencies
+
+---
+
+**Built with Mercur - Open source marketplace platform**
