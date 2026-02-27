@@ -1,21 +1,21 @@
-# 🧢 Hat Marketplace
+# 🖨️ Print-Tings Marketplace
 
-Open source marketplace for buying and selling hats, built on Mercur.
+Open source marketplace for buying and selling printed products, built on Mercur.
 
 ## 🏗 Architecture
 
 ```
 ┌─────────────────────────────────────┐
-│  Hat Buyers (B2C Storefront)       │
-│  - Browse hats from vendors           │
+│  Print Buyers (B2C Storefront)    │
+│  - Browse printed products from vendors
 │  - 5-star verified reviews             │
 │  - Multi-vendor comparison             │
 │  - Secure Stripe checkout            │
 └─────────────────────────────────────┘
               ↕
 ┌─────────────────────────────────────┐
-│  Hat Sellers (Vendor Panel)        │
-│  - Manage hat listings             │
+│  Print Sellers (Vendor Panel)      │
+│  - Manage print listings           │
 │  - Track orders & analytics          │
 │  - Request payouts                 │
 │  - Commission-based selling          │
@@ -49,26 +49,26 @@ Open source marketplace for buying and selling hats, built on Mercur.
 | Search | Algolia (optional) |
 | Frontend | React/Next.js |
 
-## 🎨 Hat Categories
+## 🎨 Print Categories
 
-- Baseball Caps
-- Beanies
-- Bucket Hats
-- Cowboy Hats
-- Fedora Hats
-- Flat Caps
-- Sun Hats
-- Trucker Hats
-- Winter Hats
-- Vintage Hats
+- Canvas Prints
+- Posters & Art Prints
+- Photo Prints
+- Wall Art
+- T-Shirts & Apparel
+- Mugs & Drinkware
+- Stickers & Decals
+- Business Cards
+- Flyers & Brochures
+- Custom Merchandise
 
 ## ⭐ Rating System
 
 - **Verified purchase reviews only** - No fake reviews!
 - **5-star rating system**
 - **Detailed review categories**:
-  - Quality of materials
-  - Sizing accuracy
+  - Print quality
+  - Color accuracy
   - Value for money
   - Shipping speed
   - Seller communication
@@ -86,8 +86,8 @@ Open source marketplace for buying and selling hats, built on Mercur.
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/mercurjs/mercur.git hat-marketplace
-cd hat-marketplace
+git clone https://github.com/mercurjs/mercur.git print-tings
+cd print-tings
 ```
 
 ### 2. Set Up Database
@@ -95,7 +95,7 @@ cd hat-marketplace
 **Option A: PostgreSQL (Local)**
 ```bash
 sudo service postgresql start
-sudo -u postgres createdb hat_marketplace
+sudo -u postgres createdb print_tings
 ```
 
 **Option B: Neon (Managed - Easiest)**
@@ -103,7 +103,7 @@ sudo -u postgres createdb hat_marketplace
 # Sign up at https://neon.tech/ (free tier)
 # Get connection string from dashboard
 # Add to apps/backend/.env
-DATABASE_URL=postgres://user:password@ep-cool-neon-host.aws.neon.tech:5432/hat_marketplace
+DATABASE_URL=postgres://user:password@ep-cool-neon-host.aws.neon.tech:5432/print_tings
 ```
 
 ### 3. Configure Environment
@@ -133,7 +133,7 @@ yarn dev
 ### 5. Clone & Start Frontends
 
 ```bash
-# B2C Storefront (Hat Shop)
+# B2C Storefront (Print Shop)
 git clone https://github.com/mercurjs/b2c-marketplace-storefront.git apps/b2c-storefront
 cd apps/b2c-storefront
 yarn install
@@ -151,7 +151,7 @@ yarn dev
 | Service | Local URL | Description |
 |---------|-----------|-------------|
 | **Backend API** | http://localhost:9000 | MedusaJS backend |
-| **B2C Storefront** | http://localhost:3001 | Hat shop |
+| **B2C Storefront** | http://localhost:3001 | Print shop |
 | **Vendor Panel** | http://localhost:3003 | Seller dashboard |
 | **Admin Panel** | http://localhost:3002 | Platform admin |
 
@@ -167,7 +167,7 @@ Required in `apps/backend/.env`:
 
 ```bash
 # Database
-DATABASE_URL=postgres://user:password@host:port/hat_marketplace
+DATABASE_URL=postgres://user:password@host:port/print_tings
 
 # CORS
 STORE_CORS=http://localhost:3001
@@ -186,7 +186,7 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxx
 
 # Email
 RESEND_API_KEY=re_xxxx
-RESEND_FROM_EMAIL=noreply@hatmarketplace.com
+RESEND_FROM_EMAIL=noreply@print-tings.com
 
 # Optional
 ALGOLIA_API_KEY=xxxx
