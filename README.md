@@ -2,6 +2,8 @@
 
 Open source marketplace for buying and selling printed products, built on Mercur.
 
+**🚀 Live Demo:** http://[coolify-url].89.167.27.180.sslip.io
+
 ## 🏗 Architecture
 
 ```
