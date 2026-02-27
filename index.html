@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print-Tings Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">P</span>
+                </div>
+                <span class="text-xl font-bold text-gray-800">Print-Tings</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900">Products</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Categories</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Vendors</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-gray-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </button>
+                <button class="text-gray-600 hover:text-gray-900 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                    </svg>
+                    <span class="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                </button>
+                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">Sell</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Discover Amazing Prints</h1>
+            <p class="text-xl mb-8 opacity-90">Shop from thousands of independent artists and print vendors worldwide</p>
+            <div class="max-w-2xl mx-auto flex space-x-4">
+                <input type="text" placeholder="Search for prints, posters, t-shirts, mugs..." class="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md cursor-pointer transition">
+                    <div class="text-4xl mb-3">🖼️</div>
+                    <h3 class="font-semibold text-gray-800">Canvas Prints</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md cursor-pointer transition">
+                    <div class="text-4xl mb-3">📜</div>
+                    <h3 class="font-semibold text-gray-800">Posters</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md cursor-pointer transition">
+                    <div class="text-4xl mb-3">👕</div>
+                    <h3 class="font-semibold text-gray-800">T-Shirts</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md cursor-pointer transition">
+                    <div class="text-4xl mb-3">☕</div>
+                    <h3 class="font-semibold text-gray-800">Mugs</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md cursor-pointer transition">
+                    <div class="text-4xl mb-3">🏷️</div>
+                    <h3 class="font-semibold text-gray-800">Stickers</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Featured Products</h2>
+                <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">View All →</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden card-hover cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">🎨</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900 mb-1">Abstract Canvas Print</h3>
+                        <p class="text-sm text-gray-600 mb-2">by ArtStudio</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-purple-600">$49.99</span>
+                            <div class="flex items-center text-yellow-500">
+                                <span class="text-lg">★</span>
+                                <span class="text-sm text-gray-600 ml-1">4.8 (124)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden card-hover cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">🌊</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900 mb-1">Ocean Wave Poster</h3>
+                        <p class="text-sm text-gray-600 mb-2">by NaturePrints</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-purple-600">$24.99</span>
+                            <div class="flex items-center text-yellow-500">
+                                <span class="text-lg">★</span>
+                                <span class="text-sm text-gray-600 ml-1">4.9 (89)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden card-hover cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-red-400 to-orange-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">🌺</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900 mb-1">Floral T-Shirt</h3>
+                        <p class="text-sm text-gray-600 mb-2">by WearArt</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-purple-600">$34.99</span>
+                            <div class="flex items-center text-yellow-500">
+                                <span class="text-lg">★</span>
+                                <span class="text-sm text-gray-600 ml-1">4.7 (56)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl overflow-hidden card-hover cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">☕</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900 mb-1">Coffee Lover Mug</h3>
+                        <p class="text-sm text-gray-600 mb-2">by PrintMugs</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-bold text-purple-600">$19.99</span>
+                            <div class="flex items-center text-yellow-500">
+                                <span class="text-lg">★</span>
+                                <span class="text-sm text-gray-600 ml-1">4.6 (203)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Seller CTA -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-white">
+                <h2 class="text-3xl font-bold mb-4">Start Selling Your Prints Today</h2>
+                <p class="text-lg mb-6 opacity-90">Join thousands of artists and vendors on Print-Tings. List your prints, posters, t-shirts, mugs, and more.</p>
+                <div class="flex justify-center space-x-4">
+                    <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">Become a Seller</button>
+                    <button class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold mb-4">Print-Tings</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">For Sellers</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Sell on Print-Tings</a></li>
+                    <li><a href="#" class="hover:text-white">Seller Dashboard</a></li>
+                    <li><a href="#" class="hover:text-white">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white">Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Support</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-white">Returns</a></li>
+                    <li><a href="#" class="hover:text-white">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Legal</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-white">Cookie Policy</a></li>
+                    <li><a href="#" class="hover:text-white">DMCA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2026 Print-Tings. Built with Mercur.</p>
+        </div>
+    </footer>
+</body>
+</html>
